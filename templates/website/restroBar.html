@@ -1,0 +1,328 @@
+{% extends 'website/webskeleton.html' %}
+{% load static %}
+
+{% block restroBar %}
+
+<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+<style media="screen">
+  .col-sm-6 , .col-sm-12 , .col-sm-4{
+    position : inherit !important;
+  }
+
+  button{
+    margin-top :0px !important;
+    color : white !important;
+    background-color :#fc3c3c !important;
+  }
+
+  button:hover{
+    background-color :white !important;
+    color : #fc3c3c !important;
+    border :2px solid #fc3c3c;
+  }
+
+  button:focus{
+    background-color :white !important;
+    color : #fc3c3c !important;
+    border :2px solid #fc3c3c;
+  }
+
+  a:hover{
+    text-decoration : none;
+  }
+
+  .booktable{
+    -webkit-box-shadow: 1px 1px 10px 3px rgba(194,188,194,1);
+		-moz-box-shadow: 1px 1px 10px 3px rgba(194,188,194,1);
+		box-shadow: 1px 1px 10px 3px rgba(194,188,194,1);
+  }
+
+  .tit5{
+  	font-weight: 400;
+  	color: white;
+  }
+
+  .taste p, .tasteM p{
+    line-height: .6;
+    color: grey;
+    font-size: 15px;
+    font-family: 'Raleway',sans-serif;
+  }
+
+  .container{
+    background: transparent;
+  }
+
+</style>
+
+
+<link rel="stylesheet" href="{% static 'css/book.css' %}">
+
+<div class="container-fluid jumbotron">
+    <div class="row" >
+        <div class="col-md-6 "style="position: inherit !important;">
+            <div class="leftT" style="text-align: center;" >
+                <span>Restaurant & Bar</span>
+                <h3>The pleasure of authentic flavors</h3>
+                <p>Eat and drink very well. Simple, isn't it? It is our promise and also our business card.
+                  At Royal Hotel the chef and the kitchen staff are a strong point, the wine list is the result of
+                  real selection, cocktails and beverages have class to sell.</p>
+            </div>
+            <br>
+            <div class="col-sm-4 offset-sm-4">
+              <a href="#cook"><button type="button" name="button" class="form-control">Order Now</button></a>
+            </div>
+            <br><br><br>
+        </div>
+        <div class="col-md-6" style="position: inherit !important;">
+          <!-- hov-img-zoom wrap-pic rightImg -->
+            <div class="">
+                <img src="{% static 'img/restro.jpg' %}" alt="" class="img-fluid rounded" >
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="parallax0" style="background-image: url({% static 'img/bg-intro-01.jpg' %});">
+    <div class="bg1-overlay t-center p-t-170 p-b-165">
+        <h2 class="tit4 t-center">
+            THE WAY OF TASTE
+            <h5 class="t-center tit5">Raw materials, combinations, creativity, refinements, abundance.</h5>
+            <h5 class="t-center tit5">The Royal Hotel at dinner, history of unrivaled excellence.</h5>
+        </h2>
+    </div>
+</div>
+
+<div class="container">
+  <img class="img-fluid" src="https://www.belvederericcione.com/images/content/1014023_55266_2_C_1170_590_0_157308775/aragosta-4-.jpg" alt="">
+</div>
+
+<div class="taste t-center container">
+    <p>The <strong>kitchen</strong> has a long history and a wide geography, both of which span <strong>traditions</strong> , <strong>fantasies</strong> and
+      even <strong>experiments</strong> .</p>
+    <p>In our restaurant the ingredients are natural, the wise procedures, the healthy result.</p>
+    <p>The Belvedere menu responds to a precise philosophy:</p>
+    <p>"Everything starts from <strong>freshness</strong> , and freshness has to come back".</p>
+    <p>But with many intermediate stages, those that allow <strong>creativity</strong> to transform <strong>simple</strong></p>
+    <p>and natural <strong>ingredients</strong> into <strong>elaborate dishes</strong> .</p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6" style="position:inherit">
+      <img src="https://www.belvederericcione.com/images/content/1014023_55797_2_C_800_594_0_324059892/cucina2.jpg" class="img-fluid" alt="">
+    </div>
+    <div class="col-md-6" style="position:inherit">
+      <img src="https://www.belvederericcione.com/images/content/1014023_55796_2_C_800_594_0_324059843/cucina1.jpg" class="img-fluid" alt="">
+    </div>
+  </div>
+  <br>
+  <div class="tasteM t-center">
+    <p>In short, our strength is to integrate the gastronomic criterion, therefore the <strong>pleasure of food</strong> , with that of health, a mix</p>
+    <p>between <strong>emphasis on taste</strong> and quality choices. Every evening at the Belvedere a ritual is staged: guests who pass</p>
+    <p>admiringly along the <strong>buffets</strong> to see "what is today". And today, that is, always, there are five meters of elaborate</p>
+    <p>appetizers</p>
+    <p>including <strong>vegetables au gratin , crudités , costaceans , mushrooms , cheeses , focaccia</strong> and special breads, smoked</p>
+    <p>and non-smoked <strong>meats</strong> …</p>
+    <p>While the central console offers at least two <strong>first courses</strong> of the <strong>great Italian and Indian</strong> tradition ,</p>
+    <p>the best <strong>second courses</strong> of <strong>fish and meat</strong> , crispy or seasoned side dishes.</p>
+    <p>To all this must be added the strictly <strong>homemade pastry</strong> , with at least three specially prepared <strong>desserts</strong> of the day.</p>
+    <p>And lastly a sumptuous offer of fresh seasonal fruit</p>
+  </div>
+</div>
+
+    <div class="parallax0" style="background-image: url({% static 'img/header-menu-01.jpg' %});">
+        <div class="bg1-overlay t-center p-t-170 p-b-165">
+            <h2 class="tit4 t-center">
+                A BAR FOR FRIEND
+                <h4 class="t-center tit5">A coffee at all hours, a glass of great wine and ...</h4>
+            </h2>
+        </div>
+    </div>
+    <div class="container">
+      <img class="img-fluid" src="https://www.belvederericcione.com/images/content/1014024_55266_2_C_1170_590_0_200019387/testatabar.jpg" alt="">
+    </div>
+    <div class="taste t-center container">
+      <p>The Belvedere has an internal bar, able to offer its guests all types of <strong>cafes , juices , herbal teas</strong></p>
+      <p>and <strong>long drinks</strong> throughout the day, but also <strong>fine wines</strong> and spirits of great history in the <strong>after dinner</strong> .</p>
+      <p>Located in one of the most beautiful rooms, in front of a window that opens onto the swimming pool,</p>
+      <p>our bar serves internal and external tables.</p>
+
+      <p>Here too, the watchword is <strong>quality</strong> : in the choice of coffee blends, or in the types of whiskey and cognac</p>
+      <p>and in everything necessary to emphasize a moment of pleasant sipping.</p>
+      <p>Next to the bar there is a computer available for guests for all types of navigation.</p>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6" style="position:inherit">
+          <img src="https://www.belvederericcione.com/images/content/1014024_55796_2_C_800_594_0_200019425/spritz-3-.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-md-6" style="position:inherit">
+          <img src="https://www.belvederericcione.com/images/content/1014024_55797_2_C_800_594_0_177341393/bar2.jpg" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+
+
+<br><br>
+<div class="container jumbotron booktable" id="cook">
+  <form class="form-group" action="/orderfood/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+  <div class="row text-center">
+    <div class="col-sm-6">
+      <div class="leftT">
+        <h4 style="text-align: center;">ORDER</h4>
+        <h3 style="text-align: center;">FOOD</h3>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <input type="text" name="name" placeholder="Name" class="form-control" required>
+        </div>
+        <div class="col-sm-6">
+          <input type="text" name="mob" placeholder="Mobile" class="form-control" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <input type="email" name="email" placeholder="* Email" required class="form-control" style="margin-bottom:10px;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <select class="form-control" name="fid">
+          {% for i in fobj %}
+            <option value="{{ i }}">{{ i.name }} - $ {{ i.price }}/plate</option>
+          {% endfor %}
+          </select>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-4">
+          <input type="number" name="qty" placeholder="Quantity" class="form-control" required>
+        </div>
+        <div class="col-sm-4">
+          <a href="#">
+            <button type="button" class="form-control" data-toggle="modal" data-target="#exampleModalCenter">
+              Order Now
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <br>
+      <div class="" style="height: 70%; width: 60%; margin-left: 70px; margin-top:0px;">
+          <img src="{% static 'img/booking-01.jpg' %}" alt="" class="img-fluid rounded">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Order Food</h5>
+          <button type="button" class="" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          A notification will be sent to your mobile number
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="" data-dismiss="modal">Close</button>
+          <button type="submit" class="">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  </form>
+</div>
+
+<br><br>
+<div class="container jumbotron booktable">
+  <form class="form-group" action="/orderdrink/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+  <div class="row text-center">
+    <div class="col-sm-6">
+      <div class="leftT">
+        <h4 style="text-align: center;">Order</h4>
+        <h3 style="text-align: center;">DRINKS</h3>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <input type="text" name="name" placeholder="Name" class="form-control" required>
+        </div>
+        <div class="col-sm-6">
+          <input type="text" name="mob" placeholder="Mobile" class="form-control" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <input type="email" name="email" placeholder="* Email" required class="form-control" style="margin-bottom:10px;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <select class="form-control" name="did">
+            {% for i in dobj %}
+              <option value="{{ i }}">{{ i.name }} - $ {{ i.price }}/Drink</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-4">
+          <input type="number" name="qty" placeholder="Quantity" class="form-control" required>
+        </div>
+        <div class="col-sm-4">
+          <a href="#">
+            <button type="button" class="form-control" data-toggle="modal" data-target="#exampleModal">
+              Order Now
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <br>
+      <div class="" style="height: 70%; width: 60%; margin-left: 70px; margin-top:0px;">
+          <img src="{% static 'img/booking-01.jpg' %}" alt="" class="img-fluid rounded">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Order Drinks</h5>
+          <button type="button" class="" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          A notification will be sent to your mobile number
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="" data-dismiss="modal">Close</button>
+          <button type="submit" class="">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  </form>
+</div>
+
+{% endblock %}

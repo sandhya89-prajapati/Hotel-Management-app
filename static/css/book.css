@@ -1,0 +1,97 @@
+body{
+	background-color: #f8f9fa;
+}
+
+#head .navbar{
+	position: sticky;
+	position: fixed;
+	width: 100% !important;
+	top: 0px !important;
+	-webkit-box-shadow: 0px 5px 31px -10px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 5px 31px -10px rgba(0,0,0,0.75);
+box-shadow: 0px 5px 31px -10px rgba(0,0,0,0.75);
+}
+
+#head ul li{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.navbar-brand{
+	color: #D4AF37 !important;
+	font-family: 'Parisienne', cursive;
+	font-size: 30px;
+	margin-left: 20px !important;
+}
+
+
+.leftT span{
+    color: red;
+    font-size: 2rem;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.leftT h4{
+    color: red;
+    font-size: 2rem;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.leftT h3{
+    font-size: 3rem;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.leftT p{
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: gray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.leftT input {
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: grey;
+    margin-left: 30px;
+    width: 80%;
+}
+
+.leftT select{
+    margin-left: 30px;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.leftT label{
+    margin-left: 30px;
+}
+
+.parallax0 {
+    background-attachment: fixed;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg1-overlay {background-color: rgba(0,0,0,0.35);}
+.t-center {text-align: center;}
+.p-t-170 {padding-top: 170px;}
+.p-b-165 {padding-bottom: 165px;}
+
+
+.tit4 {
+	font-family: Poppins;
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 1.2;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	word-spacing: 6px;
+}

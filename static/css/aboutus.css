@@ -1,0 +1,86 @@
+.col-md-8 h1 {
+    font-size: 51px;
+    margin-top: 40px;
+    color: #a8a8a8;
+    font-family: auto;
+}
+.col-md-8 img{
+    width: 1000px;
+    margin-left: -200px;
+    
+    
+}
+@media (min-width: 768px)
+.col-md-4 {
+    -ms-flex: 0 0 33.333333%!important;
+    flex: 0 0 33.333333%!important;
+    width: 117%!important;
+    max-width: 33.333333%!important;
+    margin-left: -39px!important;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-left: 46px!important;
+    font-size: 30px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+.col-md-8 p {
+    font-size: 21px;
+    background-color: white;
+    color: white;
+    font-family: initial;
+    width: 250px;
+    height: 150px;
+    margin-top: -210px;
+    margin-left: -300px;
+}
+.sql{
+    background-color: white;
+    
+    
+}
+.col-md-4 p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    width: 142%;
+    height: 563px;
+    text-align: center;
+    padding-top: 75px;
+}
+    
+.col-md-10 p{
+    background-color: white;
+    color:black;
+    font-family:serif;
+    margin-top: 64px;
+}
+    
+.col-md-10 h1 {
+    font-size: 6.5rem;
+    margin-left: -200px;
+}
+col-md-6 p{
+    text-align: center;
+    
+    
+}
+#lower_text p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-top: 72px;
+    font-size: 41px;
+    font-family: inherit;
+}
+.col-md-5 p {
+    margin-left: -200px;
+    width: 200;
+    width: 426px;
+    height: 552px;
+}
+.col-md-7 img{
+width:130%;
+    
+}

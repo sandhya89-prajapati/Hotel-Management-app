@@ -1,0 +1,159 @@
+body{
+	background-color : #f8f9fa;
+}
+
+.home_Nav_next .col-sm-12{
+	position : inherit;
+}
+
+.home_Nav_next .col-sm-6{
+	position: inherit;
+}
+
+.home_Nav_next img{
+	height: 200px;
+}
+
+.home_Nav_next .col-sm-3{
+	position: inherit;
+}
+
+#head .navbar{
+	position: sticky;
+	position: fixed;
+	width: 100% !important;
+	top: 0px !important;
+	-webkit-box-shadow: 0px 5px 31px -10px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 5px 31px -10px rgba(0,0,0,0.75);
+box-shadow: 0px 5px 31px -10px rgba(0,0,0,0.75);
+}
+
+#head ul li{
+	margin-left: 10px;
+	margin-right: 10px;
+	border-bottom: 2px solid white;
+}
+
+#head ul li:hover{
+	border-bottom: 2px solid #fc3c3c;
+}
+
+#head ul li:focus{
+	border-bottom : 2px solid #fc3c3c;
+}
+
+.navbar-brand{
+	color : #fc3c3c !important;
+	font-family: 'Parisienne', cursive;
+	font-size: 30px;
+	margin-left: 20px !important;
+}
+
+.signUp{
+	padding :5px !important;
+	background-color: #fc3c3c !important;
+	color: white !important;
+	width: 75px !important;
+}
+
+.dropdown-item:focus{
+	background-color: #D4AF37 !important;
+}
+
+#foot ul li{
+	display: inline;
+}
+
+.brands_ico_one{
+	background-color: #D4AF37;
+	border:2px solid #D4AF37;
+	color: white;
+	border-radius: 50%;
+	padding:8px 13px;
+	color: #1e0a3c;
+}
+
+.brands_ico{
+	background-color: #D4AF37;
+	border:2px solid #D4AF37;
+	color: white;
+	border-radius: 50%;
+	padding:8px 13px;
+	margin-left:20px;
+	color: #1e0a3c;
+}
+
+#foot .footer_wrapper{
+	background-color: white !important;
+}
+
+#foot .Copyright_line{
+	padding-left: 4%;
+	font-family: 'Parisienne', cursive;
+	color:  #D4AF37;
+}
+
+.form_legend{
+	font-family: 'Parisienne', cursive;
+	font-size: 20px;
+	color: #2125298f;
+}
+
+#signInInput input{
+	border:none;
+	margin:5px 0px;
+	border-bottom: 2px solid #00000024;
+	border-radius: 0px;
+	background-color: #f8f9fa;
+}
+
+#signInInput{
+	margin-bottom: 107px;
+}
+
+#signInInput input:focus{
+	outline: none;
+	box-shadow: none;
+	border-bottom: 2px solid #5a00ff;
+}
+
+#head_next input{
+	border:none;
+	margin:5px 0px;
+	border-bottom: 2px solid #00000024;
+	border-radius: 0px;
+	background-color: #f8f9fa;
+}
+
+#head_next input:focus{
+	outline: none;
+	box-shadow: none;
+	border-bottom: 2px solid #5a00ff;
+}
+
+#head_next select{
+	border:none;
+	margin:5px 0px;
+	border-bottom: 2px solid #00000024;
+	border-radius: 0px;
+	background-color: #f8f9fa;
+}
+
+.signUpButton{
+	background-color: #1e0a3c !important;
+	color: white;
+	border-bottom: none !important;
+}
+
+.signUpButton:focus{
+	color: white;
+	background-color: #5a00ffc4!important;
+}
+
+.signIn_statement{
+	color: #2125298f;
+}
+
+.signIn_statement a{
+	color: #5a00ff ;
+}

@@ -1,0 +1,119 @@
+{% extends 'website/webskeleton.html' %}
+{% load static %}
+
+{% block contactus %}
+<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+
+<style media="screen">
+  .col-sm-4  , .col-sm-12 , .col-sm-6 , .col-sm-2 , .col-sm-10 , .col-sm-8{
+    position :inherit;
+  }
+
+  #msg{
+    font-family:'Lobster',cursive;
+    font-size:1.4rem;
+  }
+
+  #swing{
+    font-family:'Merriweather Sans',sans-serif;
+    font-size:1rem;
+  }
+
+  .parallax {
+    background-image : url({% static 'img/tele.jpg' %});
+
+    /* Set a specific height */
+    min-height: 400px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  span{
+    margin-right : 15px;
+  }
+
+</style>
+
+<br>
+<div class="container" style="background-color:transparent;">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3 class="text-center" style="font-family: 'Monoton', cursive;"> <span>CONNECT</span><span>AND</span><span>GET</span><span>IN</span><span>TOUCH</span><span>WITH</span><span>US</span></h3>
+    </div>
+  </div>
+  <br><br>
+  <div class="row">
+    <div class="col-sm-6">
+      <h5 class="text-justify" style="font-style:italic;">If you have any question please feel free to drop us a line.If don't get an answer immediately.We will get back to you as soon as we can.That's a promise!</h5>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4"><a href="#six" style="text-decoration:none;"><button type="button" class="form-control" name="button" style="background-color:#fc3c3c;color:white;">Get in touch</button></a></div>
+    <div class="col-sm-1"></div>
+
+  </div>
+</div>
+
+<br>
+<div class="parallax"></div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <p> <span id="swing">Swing by for a cup of Coffee</span>, or <span id="msg">leave us a message</span> </p>
+    </div>
+  </div>
+</div>
+
+<section id="six">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4" style="font-size: 25px;background-color: #1e0a3c;color: white;">CONTACT US</div>
+      <div class="col-sm-4"></div>
+    </div>
+    <br>
+    <div class="row text-center">
+      <div class="col-sm-12" style="font-size:22px;">Contact Our Staff To Ask To Clarify Any Doubts</div>
+    </div>
+    <br><br>
+    <div class="row text-center">
+      <div class="col-sm-4" style="color: #1e0a3c;"><span><i class="fa fa-map-marker" style="font-size:30px;padding: 10px;"></i></span><br><b>MP Nagar,Bhopal<br>India</b></div>
+      <div class="col-sm-4" style="color: #1e0a3c;"><span><i class="fa fa-phone" style="font-size:30px;padding: 10px;"></i></span><br><b>Mon - Fri 08:00 21:00<br>+1800 920 8845</b></div>
+      <div class="col-sm-4" style="color: #1e0a3c;"><span><i class="fa fa-envelope" style="font-size:30px;padding: 10px;"></i></span><br><b>Feel Free to Email Us<br>info@mywebsite.com</b></div>
+    </div>
+    <form class="form-group" action="/contactus/" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+    <div class="row text-center">
+      <div class="col-sm-6">
+        <br>
+        <div class="row">
+          <div class="col-sm-2"></div><div class="col-sm-10"><input type="text" name="name" class="form-control" placeholder="Your Name" required></div>
+        </div><br>
+        <div class="row">
+          <div class="col-sm-2"></div><div class="col-sm-10"><input type="text" name="email" class="form-control" placeholder="Your Email Address" required></div>
+        </div><br>
+        <div class="row">
+          <div class="col-sm-2"></div><div class="col-sm-10"><input type="text" name="subject" class="form-control" placeholder="Subject" required></div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="row" style="margin-top:23px;">
+          <br>
+          <div class="col-sm-12"><textarea placeholder="Your Message" rows="4" cols="76" class="form-control" name="message" required></textarea></div>
+        </div><br>
+        <div class="row" style="margin-top:18px;">
+          <div class="col-sm-12"><input type="submit" name="" class="form-control" style="background-color:#1e0a3c;color:white;border:1px solid #CAFAFE;"></div>
+        </div>
+      </div>
+    </div>
+  </form>
+  </div>
+</section>
+
+{% endblock %}

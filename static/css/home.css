@@ -1,0 +1,201 @@
+#carouselExampleIndicators img{
+	height: 625px;
+}
+
+.navbar{
+	border-bottom: 2px solid #fc3c3c !important;
+	-webkit-box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.75);
+	box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.75);
+}
+
+.navbar-brand{
+	font-family: 'Parisienne', cursive !important;
+	font-size: 30px;
+	color: #fc3c3c !important;
+	font-weight: bold;
+}
+
+.navbar ul li{
+	display:  inline;
+	padding:10px;
+	margin: 10px 0px;
+}
+
+.navbar ul li a{
+	text-decoration: none;
+	border-bottom: 2px solid transparent;
+	color: #0000008a;
+}
+
+.navbar ul li a:hover{
+	border-bottom: 2px solid #fc3c3c !important;
+}
+
+.navbar ul li a:focus{
+	border-bottom: 2px solid  #fc3c3c;
+}
+
+.signIn{
+	background-color:  #fc3c3c;
+	color: white;
+	border:none;
+	padding: 5px;
+}
+
+.navbar-toggler:focus{
+	outline: none;
+}
+
+.services_sec{
+	font-size: 25px !important;
+}
+
+.services_sec b{
+	font-size: 40px;
+}
+
+.ico_p{
+	font-size: 15px !important;
+}
+
+.fa{
+	font-size: 50px;
+	color: #fc3c3c;
+}
+
+.cardsLike ul li{
+	display: inline-flex;
+	margin:20px 50px;
+}
+
+.box{
+	width: 250px;
+	-webkit-box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.75);
+	box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.75);
+	font-size: 15px;
+	padding: 10px;
+}
+
+.box b{
+	font-size: 18px;
+}
+
+.box img{
+	width: 230px !important;
+}
+
+
+.box1{
+	width: 250px;
+	font-size: 15px;
+}
+
+.box1 b{
+	font-size: 18px;
+}
+
+.box1 img{
+	width: 250px !important;
+	border-radius: 50%;
+}
+
+
+body{
+	background-color: #b0acac2e;
+}
+
+
+@media (max-width: 1000px){
+	.box{
+		width: 340px;
+		-webkit-box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.75);
+		-moz-box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.75);
+		box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.75);
+		font-size: 15px;
+	}
+	.box img{
+		width: 320px !important;
+	}
+}
+
+
+
+
+#foot .fa{
+	font-size: 25px;
+}
+
+.brands_ico_one{
+	border-radius: 50%;
+	border:2px solid white;
+	padding:10px 14px;
+}
+
+.brands_ico{
+	border-radius: 50%;
+	border:2px solid white;
+	padding: 10px;
+}
+
+
+#foot ul li{
+	display: inline;
+	margin: 0px 10px;
+}
+
+#foot .footer_wrapper{
+	background-color: white !important;
+}
+
+#foot .Copyright_line{
+	padding-left: 4%;
+	font-family: 'Parisienne', cursive;
+	color:  #D4AF37;
+}
+
+
+.brands_ico_one:hover{
+	background-color: #3e5b9a;
+	color: white;
+	border:2px solid #3e5b9a;
+}
+
+#tweet:hover{
+	background-color: white;
+	color: #1c9deb;
+	border:2px solid white;
+}
+
+#linkedin:hover{
+	background-color: #0073b0;
+	color: white;
+	border:2px solid #0073b0;
+}
+
+#pin:hover{
+	background-color: white;
+	color: #cb2027;
+	border:2px solid white;
+}
+
+#flickr:hover{
+	background-color: #0063db;
+	color: #ff0084;
+	border:2px solid #0063db;
+}
+
+@media (max-width: 400px){
+	.box{
+		width: 300px;
+		-webkit-box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.75);
+		-moz-box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.75);
+		box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.75);
+		font-size: 15px;
+	}
+	.box img{
+		width: 300px !important;
+	}
+
+}

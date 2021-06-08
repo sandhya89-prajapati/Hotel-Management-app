@@ -1,0 +1,72 @@
+{% extends 'website/webskeleton.html' %}
+{% load static %}
+
+{% block fitness %}
+<style media="screen">
+	.shadowform{
+		-webkit-box-shadow: 1px 1px 10px 3px rgba(194,188,194,1);
+		-moz-box-shadow: 1px 1px 10px 3px rgba(194,188,194,1);
+		box-shadow: 1px 1px 10px 3px rgba(194,188,194,1);
+		background-color:white;
+	}
+
+	button{
+		margin-top :22px !important;
+		color : white !important;
+		background-color :#fc3c3c !important;
+	}
+
+	button:hover{
+		background-color :white !important;
+		color : #fc3c3c !important;
+		border :2px solid #fc3c3c;
+	}
+
+	button:focus{
+		background-color :white !important;
+		color : #fc3c3c !important;
+		border :2px solid #fc3c3c;
+	}
+
+	a:hover{
+		text-decoration : none;
+	}
+
+	.col-sm-3 , .col-sm-2 , .col-sm-1{
+		position : inherit !important;
+	}
+
+	#learn1, #learn2{
+        display: none;
+    }
+
+    #button1, #button2{
+        cursor: pointer;
+        color: blue;
+    }
+
+
+</style>
+
+<br>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" ></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+		  $('#button1').click(function(){
+			$('#learn1').toggle();
+		  });
+		});
+		$(document).ready(function(){
+		  $('#button2').click(function(){
+			$('#learn2').toggle();
+		  });
+		});
+	  </script>
+
+
+
+{% endblock %}

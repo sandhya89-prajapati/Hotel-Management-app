@@ -1,0 +1,318 @@
+{% extends 'website/webskeleton.html' %}
+{% load static %}
+
+{% block fitness %}
+<style type="text/css">
+
+  .container{
+    background-color :transparent !important;
+  }
+
+    .col-sm-12 , .col-sm-6 , .col-sm-4 , .col-sm-2{
+      position : inherit !important;
+    }
+
+    .parallax {
+      background-image : url({% static 'img/fitban.jpeg' %});
+      max-height : 560px;
+
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .parallax2 {
+      background-image : url({% static 'img/barbells.jpg' %});
+
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .jymOptions{
+      color: white;
+      font-size: 30px;
+      margin-top: -20px !important;
+    }
+
+    a{
+      text-decoration: none;
+      color: #fd5252;
+    }
+
+    a:hover{
+      color: white;
+      text-decoration: none;
+    }
+
+    .plans{
+      border:1px solid #ffffff4d;
+      padding: 20px;
+      color: white;
+    }
+
+    .plans button{
+      color: white;
+      background-color: #fd5252;
+    }
+
+</style>
+
+<style media="screen">
+  .col-sm-6 , .col-sm-12 , .col-sm-4{
+    position : inherit !important;
+  }
+
+  button{
+    margin-top :0px !important;
+    color : white !important;
+    background-color :#fc3c3c !important;
+  }
+
+  button:hover{
+    background-color :white !important;
+    color : #fc3c3c !important;
+    border :2px solid #fc3c3c;
+  }
+
+  button:focus{
+    background-color :white !important;
+    color : #fc3c3c !important;
+    border :2px solid #fc3c3c;
+  }
+
+  a:hover{
+    text-decoration : none;
+  }
+
+  .booktable{
+    border : 2px solid #044b63;
+    background-color : #044b63 !important;
+  }
+
+</style>
+
+<div class="parallax">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <span style="font-size: 100px;color: white;font-weight: bold;">LET'S <br> GET <br> MOVING </span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4"><a href="#offers" style="text-decoration: none;"><button class="form-control" style="background-color: transparent;color: white;border:2px solid #fd5252;">VIEW SERVICES</button></a></div>
+      <div class="col-sm-4"><a href="#buy" style="text-decoration: none;"><button class="form-control" style="background-color: #fd5252;color: white;border:2px solid white;">BUY NOW</button></a></div>
+    </div>
+  </div>
+  <br><br><br><br><br><br>
+  <br><br><br><br><br><br>
+</div>
+
+<div class="container-fluid" style="background-color:#044b63;color: white;border:2px solid white;">
+  <div class="row">
+    <div class="col-sm-12 text-center"><p style="font-size: 40px;">"WHAT SEEMS IMPOSSIBLE TODAY WILL SOON <br> BECOME YOUR WARM-UP"</p></div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <br>
+  <div class="row">
+    <div class="col-sm-6"><img src="{% static 'img/trainer.jpg' %}" class="img-fluid"></div>
+    <div class="col-sm-6">
+      <p style="font-size: 20px;">ABOUT TRAINER</p>
+      <p style="font-size: 40px;font-weight: bold;" class="text-center">GAUTAM TIWARI</p>
+      <p class="text-justify" style="padding-left: 20px; padding-right: 9rem;">
+        A young and energetic trainer who has accompolised many feats. <br>
+        
+        He has a fine team who can help you to achieve your fitness goals and provide you 
+        a diet plan which suit your way of living and thinking. <br>
+
+      </p>
+    </div>
+  </div>
+  <br>
+</div>
+
+<div class="parallax2" id="offers">
+  <div class="container-fluid" style="background-color: rgba(0, 0, 0, 0.62) !important;">
+    <p class="text-center" style="font-size: 35px;font-weight: bold;color: white;">CHOOSE YOUR PRICING <br> PLAN</p>
+    <div class="row">
+      <div class="col-sm-4 text-center">
+        <div class="plans">
+          <br>
+          <p style="font-size: 20px;">SILVER MEMBERSHIP</p>
+          <p style="font-size: 50px;">$ 30</p>
+          <p>Short term trial for beginners</p>
+          <p>Valid for one month</p>
+          <a href="#buy"><button class="form-control">SELECT</button></a>
+          <br>
+          <p>Unlimited classes</p>
+          <p>Fitness assessment</p>
+          <p>Locker room with shower</p>
+        </div>
+      </div>
+      <div class="col-sm-4 text-center">
+        <div class="plans">
+          <br>
+          <p style="font-size: 20px;">GOLD MEMBERSHIP</p>
+          <p style="font-size: 50px;">$ 35</p>
+          <p>EVERY MONTH</p>
+          <p>Ideal for advanced trainers</p>
+          <a href="#buy"><button class="form-control">SELECT</button></a>
+          <br>
+          <p>+ Fitness assessment</p>
+          <p>Locker room with shower</p>
+          <p>FREE PARKING</p>
+        </div>
+      </div>
+      <div class="col-sm-4 text-center">
+        <div class="plans">
+          <br>
+          <p style="font-size: 20px;">PLATINUM MEMBERSHIP</p>
+          <p style="font-size: 50px;">$ 40</p>
+          <p>EVERY MONTH</p>
+          <p>Perfect for committed trainers</p>
+          <a href="#buy"><button class="form-control">SELECT</button></a>
+          <br>
+          <p>+ GUEST PRIVILEGES</p>
+          <p>Fitness assessment</p>
+          <p>Locker room with shower</p>
+        </div>
+      </div>
+    </div>
+    <br><br>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6"><img src="{% static 'img/yoga.jpg' %}" class="img-fluid" style="padding-top: 10px;"></div>
+    <div class="col-sm-6 text-justify">
+      <p style="font-size: 25px;font-weight: bold; padding: 10px; padding-top: 2.5rem;" class="text-center">YOGA</p>
+      <p class="text-justify" style="padding-top: .5rem; padding-left: 1rem; padding-right: 1rem;">
+        Yoga does more than burn calories and tone muscles. It's 
+        a total mind-body workout that combines strengthening and stretching poses with 
+        deep breathing , meditation andrelaxation. <br> Yoga is a great activity for people 
+        if they have diabetes, high blood pressure, high cholesterol, or heart disease. <br> 
+        It gives you strength, flexibility, and mind-body awareness. You'll also need to do 
+        some cardio exercies like walking, biking, or swimming <br> <br> 
+        “Yoga is not just an exercise. It is a process and system through which human beings 
+        can find their highest possible potential.” <br> - Sadhguru</p>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-12"><hr></div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-6 text-justify">
+      <p style="font-size: 25px;font-weight: bold; padding: 10px; padding-top: 2.5rem;" class="text-center">DIET</p>
+      <p class="text-justify" style="padding-left: 1rem; padding-right: 1rem;">
+        <p class="text-center">MAKE YOUR DIET INTERESTINGLY HEALTHFUL </p>The term fitness food is 
+        interchangeable with superfoods. <br>Eating a diet rich in fitness foods is essential to our 
+        health. Incorporating healthy nutrition and knowing what that means is vital in achieving a 
+        lean and healthy body.<br> When healthy eating habits become a lifestyle, we become healthier
+         and happier. <br>The best part about being innovative about your diet is something you may
+          not have bargained for. <br>If you get bored with restrictions in your diet you need to 
+          make healthy changes every month if not every week.</p>
+    </div>
+    <div class="col-sm-6"><img src="{% static 'img/permix.jpg' %}" class="img-fluid" style="padding-top: 10px;"></div>
+  </div>
+</div>
+
+<div class="container" id="buy">
+  <hr style="border:1px solid #00000063">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <p style="font-size:30px;font-style:italic;color:red;"><b>BUY</b><br><span style="font-size:40px;font-style:italic;color:black;">FITNESS PACK</span><p>
+    </div>
+  </div>
+  <form class="form-group" action="/fitness/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-4">
+        <input type="text" name="name" placeholder=" * Name" required>
+      </div>
+      <div class="col-sm-4">
+        <input type="text" name="email" placeholder=" * Email" required>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-4">
+        <select class="" name="pack" required>
+          {% for i in obj %}
+            <option value="{{ i }}">{{ i }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="col-sm-4">
+        <input type="text" name="cdate" value="{{ date }}" placeholder=" * Today Date" required readonly>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+        <div class="row">
+          <div class="col-sm-4"></div>
+          <div class="col-sm-4">
+            <button type="button" class="form-control" data-toggle="modal" data-target="#exampleModal">
+              Order Now
+            </button>
+          </div>
+          <div class="col-sm-4"></div>
+        </div>
+
+
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Order Drinks</h5>
+                <button type="button" class="" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                A notification will be sent to your Email
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="" data-dismiss="modal">Close</button>
+                <button type="submit" class="">Confirm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+  </form>
+  <br>
+    <hr style="border:0.5px solid #00000063">
+</div>
+
+<div class="container-fluid" style="margin:0px 0px !imporatant;">
+  <br>
+  <div class="row">
+    <div class="col-sm-6" style="padding:0px !important;"><img src="{% static 'img/success.jpg' %}" class="img-fluid"></div>
+    <div class="col-sm-6 text-center" style="background-color:#044b63;color: white;">
+      <p style="font-size: 30px;font-weight: bold;">SUCCESS STORIES</p>
+
+      <p style="font-size: 20px;">"In just 6 months of training with Michael I lost 38 pounds"</p>
+      <p><b>JACK</b><br>January 10, 2019</p>
+      <p style="font-size: 20px;">""Reaching my goal of 22% body fat was so easy with Michael""</p>
+      <p><b>CARRIE</b><br>January 10, 2020</p>
+      <p style="font-size: 20px;">"In just 6 months of training with Michael I lost 38 pounds"</p>
+      <p><b>IRIS</b><br>January 10, 2023</p>
+    </div>
+  </div>
+  <br>
+</div>
+
+{% endblock %}

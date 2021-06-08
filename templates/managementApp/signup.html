@@ -1,0 +1,46 @@
+ {% extends 'managementApp/skeleton.html' %}
+
+ {% block signup %}
+ <style media="screen">
+   .specificSelect{
+   	border:none;
+   	margin:5px 0px;
+   	border-bottom: 2px solid #00000024;
+   	border-radius: 0px;
+   	background-color: #f8f9fa;
+   }
+
+   .specificSelect:focus{
+   	outline: none;
+   	box-shadow: none;
+   	border-bottom: 2px solid #5a00ff;
+   }
+ </style>
+ <section id="head_next">
+   <div class="container-fluid">
+     <div class="row">
+       <div class="col-sm-4"></div>
+       <div class="col-sm-4 text-center" style="position: inherit;">
+         <form class="form-group" action="/managementApp/signup/" method="post">
+           <br>
+           <b class="form_legend">Admin Sign Up Form</b><br>
+           {% csrf_token %}
+           {{ upform }}
+           {% csrf_token %}
+           {{ uform }}
+           <input type="password" name="" placeholder="Confirm Password" class="form-control" required>
+           <br>
+           <input type="submit" name="" value="Sign Up" class="form-control signUpButton">
+         </form>
+       </div>
+       <div class="col-sm-4"></div>
+     </div>
+     <div class="row">
+       <div class="col-sm-12 text-center signIn_statement">
+         If signed up try <a href="/managementApp/signin/">signinig</a> in.
+       </div>
+     </div>
+   </div>
+ </section>
+
+ {% endblock %}

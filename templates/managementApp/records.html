@@ -1,0 +1,109 @@
+{% extends 'ManagementApp/appskeleton.html' %}
+
+{% block order %}
+
+<style media="screen">
+  .col-sm-3 , .col-sm-2 , .col-sm-8{
+    position :inherit !important;
+  }
+
+  a:hover{
+    text-decoration :none;
+  }
+</style>
+<br><br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="form_legend text-center" style="color:black;font-size:25px;">Room   Bookings</p>
+      <div style="height: 500px;overflow: auto;">
+        {% for i in rb %}
+          <div class="">
+            <b>Name</b> :{{ i.bookie }}<br>
+            <b>Aadhar</b> :{{ i.aadhar }}<br>
+            <b>Email</b> :{{ i.email }}<br>
+            <b>Mobile</b> :{{ i.mob }}<br>
+            <b>Booking Date</b> :{{ i.bookingdate }}<br>
+            <b>Room</b> :{{ i.roomtype }}<br>
+            <b>Room Id</b> :{{ i.roomid }}<br>
+            <b>Check In</b> :{{ i.checkin }}<br>
+            <b>Check Out</b> :{{ i.checkout  }}<br>
+            <b>Adults</b> :{{ i.adults }}<br>
+            <b>Children</b> :{{ i.children }}<br>
+            <b>Booking Mode</b> :{{ i.bookingmode }}<br>
+            <b>Booking Amount</b> :$ {{ i.bookingamount }}<br>
+            <b>Balance</b> :$ {{ i.remainigamount }}<br>
+            {% if i.status == 'Booked' %}
+            <b>status : <span style="color:green">Booked</span></b><br>
+            {% endif %}
+            {% if i.status == 'Checked Out' %}
+            <b>status : <span style="color:orange">Checked Out</span></b><br>
+            {% endif %}
+            <b></b>
+          </div>
+          {% if i.status == 'Booked' %}
+          <br>
+          <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+              <a href="/managementApp/updateRoomStatus/{{ i.id }}/"><button type="button" name="button" class="form-control" style="background-color:#fc3c3c;color:white;">CHECK OUT</button></a>
+            </div>
+            <div class="col-sm-2"></div>
+          </div>
+          {% endif %}
+          <b><hr style="border:1px solid cyan;"></b>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <p class="form_legend text-center" style="color:black;font-size:25px;">Food Orders</p>
+      <div style="height: 500px;overflow: auto;">
+        {% for i in food %}
+          <div class="">
+            <b>Name</b> :{{ i.name }}<br>
+            <b>Mobile No.</b> :{{ i.mob }}<br>
+            <b>Email</b> :{{ i.email }}<br>
+            <b>Food</b> :{{ i.foodtype }}<br>
+            <b>Qty</b> :{{ i.qty }}<br>
+            <b>Status</b> :{{ i.status }}<br>
+          </div>
+          <b><hr style="border:1px solid cyan;"></b>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <p class="form_legend text-center" style="color:black;font-size:25px;">Drink Orders</p>
+      <div style="height: 500px;overflow: auto;">
+        {% for i in drink %}
+          <div class="">
+            <b>Name</b> :{{ i.name }}<br>
+            <b>Mobile No.</b> :{{ i.mob }}<br>
+            <b>Email</b> :{{ i.email }}<br>
+            <b>Drink</b> :{{ i.drinktype }}<br>
+            <b>Qty</b> :{{ i.qty }}<br>
+            <b>Status</b> :{{ i.status }}<br>
+          </div>
+          <b><hr style="border:1px solid cyan;"></b>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <p class="form_legend text-center" style="color:black;font-size:25px;">Fitness Pack</p>
+      <div style="height: 500px;overflow: auto;">
+        {% for i in pack %}
+          <div class="">
+            <b>Name</b> :{{ i.name }}<br>
+            <b>Email</b> :{{ i.email }}<br>
+            <b>Pack</b> :{{ i.packtype }}<br>
+            <b>Pack Expiry Date</b> :{{ i.expdate }}<br>
+            <b>Status</b> :{{ i.status }}<br>
+          </div>
+          <b><hr style="border:1px solid cyan;"></b>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

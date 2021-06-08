@@ -1,0 +1,135 @@
+{% extends 'managementApp/appskeleton.html' %}
+{% load static %}
+
+{% block addnew %}
+
+<style media="screen">
+  .col-sm-4 , .col-sm-12{
+    position : inherit !important;
+  }
+</style>
+
+<div class="container">
+  <hr style="border:1px solid #00000063">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <p style="font-size:20px;font-style:italic;color:#044b63;"><b>ADD</b><br><span style="font-size:25px;font-style:italic;color:black;">ROOM TYPES</span><p>
+    </div>
+  </div>
+  <form class="form-group" action="/managementApp/addroomtype/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="row">
+      <div class="col-sm-4 offset-sm-4">
+        <input type="text" name="roomName" placeholder="* Room Name" required class="form-control">
+        <input type="file" name="roomimg" placeholder="* Room Image" required style="height:40px;width:350px;padding:5px;">
+        <input type="number" name="totalrooms" placeholder="* Total Rooms" required class="form-control">
+        <input type="number" name="roomsize" placeholder="* Room Size" required class="form-control">
+        <input type="text" name="roomview" placeholder="* Room View" required class="form-control">
+        <input type="number" name="roomoccupancy" placeholder="* Room Occupancy" required class="form-control">
+        <input type="number" name="roomprice" placeholder="* Price" required class="form-control">
+        <input type="text" name="roomdesc" placeholder="* Description" required class="form-control"><br>
+        <input type="submit" name="roomtype" value="ADD ROOMTYPE" class="form-control" style="color:white;background-color:#044b63;">
+      </div>
+    </div>
+  </form>
+  <br>
+</div>
+
+<div class="container">
+  <hr style="border:1px solid #00000063">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <p style="font-size:20px;font-style:italic;color:#044b63;"><b>ADD</b><br><span style="font-size:25px;font-style:italic;color:black;">HOTEL ROOM</span><p>
+    </div>
+  </div>
+  <form class="form-group" action="/managementApp/addroom/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="row">
+      <div class="col-sm-4 offset-sm-4">
+        <input type="number" name="hotelRoomid" placeholder="* Room Id" required class="form-control">
+        <select class="form-control" name="roomtype" required>
+          {% for i in obj %}
+            <option value="{{ i }}">{{ i }}</option>
+          {% endfor %}
+        </select>
+        <input type="text" name="bookings" placeholder="* Bookings Dates" required class="form-control"><br>
+        <input type="submit" name="room" value="ADD ROOM" class="form-control" style="color:white;background-color:#044b63;">
+      </div>
+    </div>
+  </form>
+  <br>
+</div>
+
+<div class="container">
+  <hr style="border:1px solid #00000063">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <p style="font-size:20px;font-style:italic;color:#044b63;"><b>ADD</b><br><span style="font-size:25px;font-style:italic;color:black;">FOOD</span><p>
+    </div>
+  </div>
+  <form class="form-group" action="/managementApp/addfood/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="row">
+      <div class="col-sm-4 offset-sm-4">
+        <input type="text" name="name" placeholder="* Food Name" required class="form-control">
+        <input type="file" name="img" placeholder="* Image" required style="height:40px;width:350px;padding:5px;">
+        <input type="number" name="price" placeholder="* Price" required class="form-control">
+        <input type="text" name="cat" placeholder="* Category" required class="form-control">
+        <input type="text" name="desc" placeholder="* Description" required class="form-control"><br>
+        <input type="submit" name="food" value="ADD FOOD" class="form-control" style="color:white;background-color:#044b63;">
+      </div>
+    </div>
+  </form>
+  <br>
+</div>
+
+
+<div class="container">
+  <hr style="border:1px solid #00000063">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <p style="font-size:20px;font-style:italic;color:#044b63;"><b>ADD</b><br><span style="font-size:25px;font-style:italic;color:black;">DRINK</span><p>
+    </div>
+  </div>
+  <form class="form-group" action="/managementApp/adddrink/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="row">
+      <div class="col-sm-4 offset-sm-4">
+        <input type="text" name="name" placeholder="* Drink Name" required class="form-control">
+        <input type="file" name="img" placeholder="* Image" required style="height:40px;width:350px;padding:5px;">
+        <input type="number" name="price" placeholder="* Price" required class="form-control">
+        <input type="text" name="cat" placeholder="* Category" required class="form-control">
+        <input type="text" name="desc" placeholder="* Description" required class="form-control"><br>
+        <input type="submit" name="drink" value="ADD DRINK" class="form-control" style="color:white;background-color:#044b63;">
+      </div>
+    </div>
+  </form>
+  <br>
+</div>
+
+<div class="container">
+  <hr style="border:1px solid #00000063">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <p style="font-size:20px;font-style:italic;color:#044b63;"><b>ADD</b><br><span style="font-size:25px;font-style:italic;color:black;">FITNESS PACK</span><p>
+    </div>
+  </div>
+  <form class="form-group" action="/managementApp/addfitness/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="row">
+      <div class="col-sm-4 offset-sm-4">
+        <input type="text" name="name" placeholder="* Pack Name" required class="form-control">
+        <input type="file" name="img" placeholder="* Image" required style="height:40px;width:350px;padding:5px;">
+        <input type="number" name="price" placeholder="* Price" required class="form-control">
+        <input type="number" name="duration" placeholder="* Duration" required class="form-control">
+        <input type="text" name="desc" placeholder="* Description" required class="form-control"><br>
+        <input type="submit" name="pack" value="ADD PACK" class="form-control" style="color:white;background-color:#044b63;">
+      </div>
+    </div>
+  </form>
+  <br>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'managementApp/appskeleton.html' %}
+
+{% block viewbar %}
+
+<br><br><br>
+<div class="container">
+<div class="row">
+  {% for i in obj %}
+  <div class="col-sm-2" style="background-color:#CAFAFE;padding:0px !important;margin:10px;">
+    <div class="row text-center">
+      <div class="col-sm-12"><img src="{{ i.img.url }}" alt="img" class="img-fluid"></div>
+      <div class="col-sm-12"><p class="form_legend" style="color:black;font-size:22px;">{{ i.name }}<br>$ {{ i.price }}</p></div>
+      <div class="col-sm-6 offset-sm-3"><a href="/managementApp/deletedrink/{{ i.id }}/"><input type="submit" name="" value="Delete" class="form-control"></a></div>
+      <br><br>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+</div>
+
+{% endblock %}

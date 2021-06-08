@@ -1,0 +1,29 @@
+{% extends 'managementApp/skeleton.html' %}
+
+{% block signin %}
+<br>
+<div class="container-fluid" id='signInInput'>
+  <div class="row text-center">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4" style="position:inherit;">
+      <b class="form_legend">Admin Sign In</b>
+      <br><br>
+      <span><i class="fa fa-user" style="font-size:80px;color:#1e0a3c;"></i></span>
+      <br>
+      <form class="form-group" action="/managementApp/signin/" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="text" name="userName" placeholder="Username" class="form-control" required>
+        <input type="password" name="password" placeholder="Password" class="form-control" required>
+        <br>
+        <input type="submit" name="" value="Sign In" class="form-control signUpButton">
+      </form>
+    </div>
+    <div class="col-sm-4"></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 text-center signIn_statement">
+      Unable to sign in try <a href="/managementApp/signup/">signing up</a> .
+    </div>
+  </div>
+</div>
+{% endblock %}

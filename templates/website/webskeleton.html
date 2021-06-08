@@ -1,0 +1,117 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Kelly+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style type="text/css">
+      #head .navbar-brand img{
+        height: 4rem;
+        width: 8rem;
+      }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/RoyalOutline/HotelManagementPage.css' %}">
+
+
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <link rel="stylesheet" href="{% static 'css/room.css' %}">
+    <link rel="stylesheet" href="{% static 'css/services.css' %}">
+
+    <title>Royal Hotel</title>
+  </head>
+  <body>
+    <section id="head">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: white !important;">
+        <a class="navbar-brand" href="/"><img src="{% static 'img/royallogo.png' %}"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">HOME</a>
+            </li>            
+            <li class="nav-item">
+              <a class="nav-link" href="/hotelrooms/">ROOMS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/fitness/">FITNESS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/restroBar/">RESTRO & BAR</a>
+            </li>          
+            <li class="nav-item">
+              <a class="nav-link" href="/aboutus/">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contactus/">CONTACT US</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+    <br><br><br>
+
+    {% block payment %}
+    {% endblock %}
+
+    {% block roombooking %}
+    {% endblock %}
+
+    {% block restroBar %}
+    {% endblock %}
+
+    {% block fitness %}
+    {% endblock %}
+
+    {% block services %}
+    {% endblock %}
+
+    {% block aboutus %}
+    {% endblock %}
+
+    {% block hotelrooms %}
+    {% endblock %}
+
+    {% block contactus %}
+    {% endblock %}
+
+    <br>
+
+    <section id="foot">
+      <div class="container-fluid footer_wrapper" style="background-color: #1e0a3c !important;">
+        <br>
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <ul>
+              <li><a href="#"><span class="brands_ico_one"><i class="fa fa-facebook"></i></span></a></li>
+              <li><a href="#"><span class="brands_ico"><i class="fa fa-twitter"></i></span></a></li>
+              <li><a href="#"><span class="brands_ico"><i class="fa fa-linkedin"></i></span></a></li>
+              <li><a href="#"><span class="brands_ico"><i class="fa fa-pinterest"></i></span></a></li>
+              <li><a href="#"><span class="brands_ico"><i class="fa fa-flickr"></i></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-sm-12 text-center Copyright_line"><b>Copyright 2020 ,ROYAL HOTEL</b></div>
+        </div>
+        <br>
+      </div>
+    </section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

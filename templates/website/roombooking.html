@@ -1,0 +1,89 @@
+{% extends 'website/webskeleton.html' %}
+
+{% block roombooking %}
+
+<style media="screen">
+  .col-sm-4{
+    position : inherit;
+  }
+
+  button{
+    margin-top :22px !important;
+    color : white !important;
+    background-color :#fc3c3c !important;
+  }
+
+  button:hover{
+    background-color :white !important;
+    color : #fc3c3c !important;
+    border :2px solid #fc3c3c;
+  }
+
+  button:focus{
+    background-color :white !important;
+    color : #fc3c3c !important;
+    border :2px solid #fc3c3c;
+  }
+</style>
+
+<br>
+<div class="container-fluid">
+  <h3 class="form_legend text-center" style="color:black !important;font-size:30px;">Fill Booking Details</h3>
+  <form class="form-group" action="" method="post" enctype="multipart/form-data">
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4 text-center">
+      {% csrf_token %}
+        <input type="text" name="bookie" value="" required placeholder="* Bookie Name" class="form-control">
+        <input type="text" name="aadhar" value="" required placeholder="* Aadhar" class="form-control">
+        <input type="email" name="email" value="" required placeholder="* Email" class="form-control" style="margin-bottom:16px;">
+        <input type="number" name="mob" value="" required placeholder="* Mobile no." class="form-control" style="margin-bottom:16px;">
+        <select class="form-control" name="pay">
+          <option value="Online">Online</option>
+        </select>
+        <input type="number" name="bookamt" value="" required placeholder="* Booking Amount" class="form-control">
+    </div>
+    <div class="col-sm-4">
+      <input type="text" name="date" value="{{ date }}" required placeholder="* Booking Date" class="form-control" readonly>
+      <input type="text" name="cindate" value="{{ datein }}" required placeholder="* Check In" class="form-control" readonly>
+      <input type="text" name="coutdate" value="{{ dateout }}" required placeholder="* Check Out" class="form-control" readonly>
+      <input type="text" name="cat" value="{{ roomobj.roomtype.roomName }}" required placeholder="* Room Category" class="form-control" readonly>
+      <input type="number" name="adult" value="{{ adu }}" required placeholder="* No. Adults" class="form-control" readonly>
+      <input type="number" name="children" value="{{ chil }}" required placeholder="* No. Children" class="form-control" style="margin:16px 0px;" readonly>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4"><button type="button" class="form-control" data-toggle="modal" data-target="#exampleModalCenter">
+      BOOK ROOM
+    </button></div>
+    <div class="col-sm-4"></div>
+  </div>
+
+
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Room Booking</h5>
+          <button type="button" class="" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Click Confirm and enjoy out best services.A response will be sent to your detailed gamil account.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="" data-dismiss="modal">Close</button>
+          <button type="submit" class="">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  </form>
+</div>
+
+{% endblock %}

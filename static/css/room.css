@@ -1,0 +1,84 @@
+body{
+	background-color: #f8f9fa;
+}
+
+#head .navbar{
+	position: sticky;
+	position: fixed;
+	width: 100% !important;
+	top: 0px !important;
+	-webkit-box-shadow: 0px 5px 31px -10px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 5px 31px -10px rgba(0,0,0,0.75);
+	box-shadow: 0px 5px 31px -10px rgba(0,0,0,0.75);
+}
+
+#head ul li{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.navbar-brand{
+	color: #D4AF37 !important;
+	font-family: 'Parisienne', cursive;
+	font-size: 30px;
+	margin-left: 20px !important;
+}
+
+.basic{
+	padding: 20px;
+	padding-bottom: 30px;
+}
+
+.side_text{
+	padding-left: 2rem;
+}
+
+.basic .heading{
+	font-size: 30px;	
+	font-weight: 400;
+	padding-left: 2rem;
+
+}
+
+.basic .price{
+	padding-left: 2rem;
+	padding: 1rem;
+	font-size: 1.5rem;
+}
+
+.basic .price .number{
+	font-size: 2rem;
+	font-weight: 400;
+}
+
+.basic .specs{
+	padding-left: 2rem;
+	list-style: none;
+	text-decoration: none;
+	font-weight: 350;
+}
+
+.hori{
+	width: 80%;
+	padding: 2%;
+	padding-bottom: 0;
+}
+
+.check .ad{
+	margin-right: 20px;
+}
+
+.book{
+	padding: 10px;
+	padding-bottom: 20px;
+}
+
+.button{
+	background-color: red;
+	color: black;
+}
+
+.button:hover{
+	background-color: black;
+	color: red;
+}

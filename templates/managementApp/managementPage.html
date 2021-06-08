@@ -1,0 +1,59 @@
+{% extends 'managementApp/appskeleton.html' %}
+{% load static %}
+
+{% block managementPage %}
+
+<style media="screen">
+  .col-sm-8 , .col-sm-4 , .col-sm-2{
+    position : inherit !important;
+  }
+
+  #roomco{
+    border :3px solid cyan;
+    background-color: #044b63;
+    padding : 20px;
+    margin :5px;
+  }
+
+  a:hover{
+    text-decoration : none;
+  }
+
+  a{
+    color : #22fff0;
+  }
+
+  .restbox{
+    background-color : #044b63;
+    padding : 0px;
+    color : white;
+    overflow-y: scroll;
+    height : 480px;
+  }
+</style>
+
+<br>
+<h4 class="text-center form_legend" style="font-size:31px;">Welcome {{ request.user.username }}</h4>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 text-center" style="overflow-y: scroll;">
+      <div class="row">
+        {% for i in obj %}
+        <div class="col-sm-2 text-center" id="roomco">
+          <a href="/managementApp/managementPagetwo/{{ i.hotelRoomid }}/">Room {{ i.hotelRoomid }} <br> {{ i.roomtype }}</a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="restbox" style="border:2px solid #22fff0 !important;">
+          <div>
+            {% block managementPagetwo %}
+            {% endblock %}
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

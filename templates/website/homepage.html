@@ -1,0 +1,472 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
+    <link href="https://fonts.googleapis.com/css?family=Kelly+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+
+    <style media="screen">
+    body{
+      background-color: white;
+    }
+      .container{
+       background: transparent;
+      }
+
+      .oButton{
+        text-align: center;
+        font-family: 'Berkshire Swash', cursive;
+      }
+      .checkBtn{
+        background-color: red;
+        color: white;
+        margin-top: 20px;
+      }
+
+      .checkBtn:hover{
+        background-color: white;
+        color: red;
+        border: 1px solid red;
+      }
+
+      .parallax {
+        background-image : url({% static 'img/bg_1.jpg' %});
+
+        /* Set a specific height */
+        min-height: 450px;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .navbar img{
+        height: 4rem;
+        width: 8rem;
+      }
+
+      #learn1, #learn2{
+        display: none;
+      }
+
+      #button1, #button2{
+        cursor: pointer;
+        color: blue;
+      }
+
+      .intro-section {
+        padding: 50px;
+        padding-bottom: 30px;
+      }
+      .intro-section h1{
+          font-family: 'Monoton', cursive;
+          font-size: 70px;
+          color: grey;
+          margin-bottom: 0;
+          padding-bottom: 0;
+      }
+      .intro-section h3{
+        font-family: 'Great Vibes', cursive;
+        font-size: 30px;
+        padding-bottom: 30px;
+      }
+      .intro-section .hl{
+        width: 80%;
+        margin-top: 0;
+        padding-top: 0;
+        border: .8px solid grey;
+        padding-left: 0;
+        margin-left: 0;
+      }
+      .intro-section p{
+        padding-left: 50px;
+        text-align: justify;
+        font-size: 1.2rem;
+        color: grey;
+      }
+      .intro-section img{
+          padding-top: 6rem;
+          padding-left: 2rem;
+      }
+
+    </style>
+
+    <title>Royal Hotel</title>
+  </head>
+  <body>
+    <nav class="navbar sticky-top navbar-light bg-light">
+      <img src="{% static 'img/royallogo.png' %}">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="/hotelrooms/">ROOMS</a></li>
+          <li><a href="/fitness/">FITNESS</a></li>
+          <li><a href="/restroBar/">RESTRO & BAR</a></li>      
+          <li><a href="/aboutus/">ABOUT US</a></li>
+          <li><a href="/contactus/">CONATCT US</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="{% static 'img/exclusive1.jpg' %}" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="{% static 'img/hotel6.jpg' %}" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="{% static 'img/standard1.jpg' %}" alt="Third slide">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <br>
+
+
+    <div class="intro-section container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>Welcome</h1>
+          <hr class="hl">
+          <h3>Five-star Royal Hotel</h3>
+          <div class="introPara">
+            <p>Fresh air, warm sunshine and majestic views –
+            welcome to the Royal Hotel in Rajasthan.
+            Home in the Desert complete with <strong>luxury spa</strong>
+            and <strong>weekly activity programme.</strong></p>
+
+            <p>From saunas and beauty treatments to fine food throughout the day and cosy rooms and suites –
+            guests staying at the Royal Hotel can look forward to many extras as standard.
+            The friendly culture looks forward to welcoming you!</p>
+
+            <p><strong>Get ready to experience an unforgettable spa holiday in the heart of the Thar</strong></p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="{% static 'img/royal-hotel.jpg' %}" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+
+
+    <br>
+    <hr>
+    <br>
+    <div class="services_sec">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>FEATURED ROOMS</p>
+          </div>
+          <hr>
+          <div class="col-sm-12">
+            <b>Rooms & Suits</b>
+          </div>
+        </div>
+        <br>
+        <div class="col-sm-6 text-justify">
+          <p style="font-size: 18px;">Space is luxury, said an important philosopher. But here along with spacious rooms we provide you rooms epuiped with modern tech and fine linens added to to the perimeter of the room, and above all the strong sign of a design with clean and authoritative lines: which play primarily with colors, to create wise and pleasant visual contrasts</p>
+        </div>
+        <div class="row cardsLike">
+          <ul>
+            <li>
+              <div class="box">
+                <img src="{% static 'img/basic1.jpg' %}" style="width: 40px; height: 200px;">
+                <b>BASIC</b>
+                <br>$150/per night
+                <br><b>Adult : </b>Max 2
+                <br><b>Size : </b>50 sq m
+                <br><b>Amenities : </b><br>
+                  - Free Wi-Fi <br>
+                  - Flatscreen TV w/ Cable<br>
+                  - Air Conditioning<br>
+                  - Queen Bed<br>
+                  - Private Bathroom w/ Shower<br>
+                  - Room Service <br>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <img src="{% static 'img/standard1.jpg' %}" style="width: 40px; height: 200px;">
+                <b>STANDARD</b>
+                <br>$200/per night
+                <br><b>Adult : </b>Max 2
+                <br><b>Size : </b>80 sq m
+                <br><b>Amenities : </b><br>
+                  - Free Wi-Fi <br>
+                  - Flatscreen TV w/ Cable<br>
+                  - King Bed<br>
+                  - Private Bathroom w/ Shower<br>                  
+                  <div id="learn1">
+                    - Room Service <br>
+                    - Room Safe <br>
+                    - Mini Fridge <br>
+                    - Hair Dryer <br>
+                    - Central A/C <br>
+                  </div>
+                  <p id="button1">Learn More >></p>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <img src="{% static 'img/exclusive1.jpg' %}" style="width: 40px; height: 200px;">
+                <b>EXCLUSIVE</b>
+                <br>$350/per night
+                <br><b>Adult : </b>Max 4
+                <br><b>Size : </b>120 sq m
+                <br><b>Amenities : </b><br>
+                - Free Wi-Fi <br>
+                - Flatscreen TV w/ Cable<br>
+                - King Bed or 2 Queen Bed<br>
+                - Private Bathroom w/ Shower<br>                
+                <div id="learn2">
+                  - Room Service <br>
+                  - Room Safe <br>
+                  - Mini Fridge <br>
+                  - Hair Dryer <br>
+                  - Central A/C <br>
+                  - Living Area <br>
+                  - Spa <br>
+                  - Massage <br>
+                </div>
+                <p id="button2">Learn More >></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="oButton">
+          <a href="/hotelrooms/"> <input type="button" class="checkBtn btn" value="BOOK NOW"> </a>
+        </div>
+      </div>
+    </div>
+
+
+
+    <br>
+    <hr>
+    <br>
+    <div class="services_sec">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>MENUS</p>
+          </div>
+          <hr>
+          <div class="col-sm-12">
+            <b>Restaurant and Bar</b>
+          </div>
+        </div>
+        <br>
+        <div class="col-sm-6 text-justify">
+          <p style="font-size: 18px;">Eat and drink very well. Simple, isn't it? It is our promise and also our business card. At Royal Hotel the chef and the kitchen staff are a strong point, the wine list is the result of real selection, cocktails and beverages have class to sell.</p>
+        </div>
+        <div class="row cardsLike">
+          <ul>
+            <li>
+              <div class="box">
+                <img src="{% static 'img/Barbeque.jpg' %}" style="width: 40px; height: 200px;">
+                <br><b>Meat Barbeque</b>
+                <br>A mouth watering barbeque smoked with red wine and  served with red wine sauce and coriander.
+                <br><b>$50</b>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <img src="{% static 'img/Shrimps.jpg' %}" style="width: 40px; height: 200px;">
+                <br><b>Prawns</b>
+                <br> Red prawn, coconut, passion fruit and coriander recipe, if the prawn is served with its shell on.
+                <br><b>$50</b>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <img src="{% static 'img/red wine.jpg' %}" style="width: 40px; height: 200px;">
+                <br><b>Red Wine</b>
+                <br>Made from Cabernet Franc which has flavours like violets, blueberry, earth, black olive.
+                <br><b>$25</b>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="oButton">
+          <a href="/restroBar/"> <input type="button" class="checkBtn btn" value="Order a Meal"> </a>
+        </div>
+      </div>
+    </div>
+
+
+    <br>
+    <hr>
+    <br>
+    <div class="services_sec">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>SERVICES</p>
+          </div>
+          <hr>
+          <div class="col-sm-12">
+            <b>Facilities & Services</b>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="row ico_p text-center">
+          <div class="col-sm-1"></div>
+          <div class="col-sm-3"><span><i class="fa fa-bed"></i></span><h4>Luxury Rooms</h4><p>They are our pride:
+            you just have to enter once and you can understand immediately, without many words.</p></div>
+          <div class="col-sm-1"></div>
+          <div class="col-sm-3"><span><i class="fa fa-wifi"></i></span><h4>Fast & Free Wifi</h4><p>It's invisile, but it has the power
+          to connect you to what you need and in this digital era everyone needs to be connected</p></div>
+          <div class="col-sm-1"></div>
+          <div class="col-sm-3"><span><i class="fa fa-phone"></i></span><h4>Concierge Service</h4><p>We are your connection to all the necessities you need.</p></div>
+        </div>
+        <div class="row ico_p text-center">
+          <div class="col-sm-1"></div>
+          <div class="col-sm-3"><span><i class="fa fa-car"></i></span><h4>Pick and Drop</h4><p>Your comfort is our duty</p></div>
+          <div class="col-sm-1"></div>
+          <div class="col-sm-3"><span><i class="fa fa-credit-card"></i></span><h4>Accepts all Payment Method</h4><p></p></div>
+          <div class="col-sm-1"></div>
+          <div class="col-sm-3"><span><i class="fa fa-building"></i></span><h4>Restaurant</h4><p>Here we belief that
+            cooking with love provides food for the soul</p></div>
+        </div>
+      </div>
+    </div>
+
+
+    <br>
+    <hr>
+    <br>
+    
+
+    <div class="parallax"></div>
+
+    <br>
+    <hr>
+    <br>
+    <div class="services_sec">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>REVIEWS</p>
+          </div>
+          <hr>
+          <div class="col-sm-12">
+            <b>Guest Reviews</b>
+          </div>
+        </div>
+        <br>
+        <div class="col-sm-6 text-justify">
+          <p style="font-size: 18px;"></p>
+        </div>
+        <div class="row cardsLike">
+          <ul>
+            <li>
+              <div class="box1 text-center">
+                <img src="{% static 'img/person_1.jpg' %}">
+                <br><b>Martin Newmansfield</b><br>Satisfied Customer
+                <br>
+                <div class="text-justify">”Excellent hosts, we arrived after a traumatic bus crash on our journey to Huanchaco and Dario and his wife could not have been more accomodating and done their best to make sure we recovered. Really clean hostel with nice private rooms, dorms looked good too. Hot showers. Free tea and coffee. And all the advice you could wish for. Awesome stay would 100% recommend. “</div>
+              </div>
+            </li>
+            <li>
+              <div class="box1 text-center">
+                <img src="{% static 'img/person_2.jpg' %}">
+                <br><b>Nancy Green</b><br>Satisfied Customer
+                <br>
+                <div class="text-justify">”Royal Hotel is beautiful and so enjoyable in so many ways. The location, the comfort, the view, the hospitality and the breakfast everything was top quality and would recommend staying there to make your Cusco experience unique. It a must do and must go 100% without doubt. Thank you for our stay and will definitely be back “</div>
+              </div>
+            </li>
+            <li>
+              <div class="box1 text-center">
+                <img src="{% static 'img/person_3.jpg' %}">
+                <br><b>Elizabeth Charles</b><br>Satisfied Customer
+                <br>
+                <div class="text-justify">”It‘s an extremely good Apartment-Hotel- my husband and I are travelling a lot and don’t often rate very well but this had everything to feel home and comfortable. The breakfast is great with fruits and eggs and yogurt, as well as the shower with a lot of different programs. It is very clean, modern and the hosts are really nice and arrange everything for you. We definitely recommend!! “</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <br><br><br><br>
+    <section id="foot">
+    <div class="container-fluid footer_wrapper" style="background-color: #1e0a3c !important;">
+      <br>
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <ul>
+            <li><a href="#"><span class="brands_ico_one"><i class="fa fa-facebook"></i></span></a></li>
+            <li><a href="#"><span class="brands_ico" id="tweet"><i class="fa fa-twitter"></i></span></a></li>
+            <li><a href="#"><span class="brands_ico" id="linkedin"><i class="fa fa-linkedin"></i></span></a></li>
+            <li><a href="#"><span class="brands_ico" id="pin"><i class="fa fa-pinterest"></i></span></a></li>
+            <li><a href="#"><span class="brands_ico" id="flickr"><i class="fa fa-flickr"></i></span></a></li>
+          </ul>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-12 text-center Copyright_line"><b>Copyright 2020 ,ROYAL HOTEL</b></div>
+      </div>
+      <br>
+    </div>
+  </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#button1').click(function(){
+          $('#learn1').toggle();
+        });
+      });
+      $(document).ready(function(){
+        $('#button2').click(function(){
+          $('#learn2').toggle();
+        });
+      });
+    </script>
+
+
+  </body>
+</html>

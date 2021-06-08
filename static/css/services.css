@@ -1,0 +1,25 @@
+body{
+	background-color: #f8f9fa;
+}
+
+#head .navbar{
+	position: sticky;
+	position: fixed;
+	width: 100% !important;
+	top: 0px !important;
+	-webkit-box-shadow: 0px 5px 31px -10px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 5px 31px -10px rgba(0,0,0,0.75);
+box-shadow: 0px 5px 31px -10px rgba(0,0,0,0.75);
+}
+
+#head ul li{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.navbar-brand{
+	color: #D4AF37 !important;
+	font-family: 'Parisienne', cursive;
+	font-size: 30px;
+	margin-left: 20px !important;
+}

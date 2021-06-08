@@ -1,0 +1,195 @@
+{% extends 'website/webskeleton.html' %}
+{% load static %}
+
+{% block aboutus %}
+<style media="screen">
+  .col-sm-6 , .col-sm-12{
+    position :inherit;
+  }
+
+  .container{
+    background-color :transparent !important;
+  }
+
+  .parallax {
+    background-image : url({% static 'img/bg-4.jpg' %});
+
+    /* Set a specific height */
+    min-height: 450px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .clientsay {
+    background-image : url({% static 'img/pattern.png' %});
+
+    /* Set a specific height */
+    min-height: 350px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  a:hover{
+    text-decoration : none;
+  }
+
+</style>
+
+<script type="text/javascript">
+</script>
+
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3 class="text-center">ABOUT US</h3>
+      <hr>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-4"style="position: inherit !important;">
+      <img class=" img-fluid" src="{% static 'img/athithi.webp' %}">
+    </div>
+    <div class="col-sm-4" style="position: inherit !important;">
+      <br>
+      <h3 class="text-center">Our Vision</h3>
+      <p class="text-center">To provide the best of the best facilities to our guests and follow our tradition
+      <h4 class="text-center">ATHITHI DEVO BHAVA</h4>
+      </p><br>
+      <h3 class="text-center">Our Mission</h3>
+      <p class="text-center">We just want our guests to have a memorable vacation and love the culture and 
+        tradition of Rajasthan.</p>
+    </div>
+    <div class="col-sm-4" style="position: inherit !important;">
+      <img class=" img-fluid" src="{% static 'img/atithi-devo-bhava-logo.png' %}">
+    </div>
+  </div>
+
+<br>
+<hr>
+<br>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <br>
+      <h3 class="text-center">EXPERTS IN BUSINESS</h3>
+      <br>
+      <p class="text-justify">
+        The rooms are our pride as they show who we are and what we want our 
+        guests to have in their visit to our hotel. We provide Indian as well as Italian cousine which are 
+        mouth watering and delicious in their own way.
+        The facilities we provide are one of its own kind and the staff look after you in a way that you will
+        feel you are out of this world.    
+      </p>
+    </div>
+    <div class="col-sm-6">
+      <img class=" img-fluid" src="{% static 'img/experts.jpg' %}">
+    </div>
+  </div>
+</div>
+
+<br>
+<div class="parallax">
+  <div class="container-fluid" style="background-color:rgba(0, 0, 0, 0.43) !important;height:450px;">
+    <br><br><br><br><br><br>
+    <div class="row">
+      <div class="col-sm-12">
+        <h3 class="text-center" style="color:white;">OUR MILESTONES</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4 text-center" style="position: inherit;">
+        <img class="img-fluid" src="{% static 'img/award1.png' %}" alt="" style="height: 250px; width: 300px;">
+      </div>
+      <div class="col-sm-4 text-center" style="position: inherit;">
+        <img class="img-fluid" src="{% static 'img/award2.jpg' %}" alt=""  style="height: 250px; width: 300px;">
+      </div>
+      <div class="col-sm-4 text-center" style="position: inherit;">
+        <img class="img-fluid" src="{% static 'img/award3.png' %}" style="height: 150px; width: 300px;" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <img class=" img-fluid" src="{% static 'img/mannwomen.jpg' %}">
+    </div>
+    <div class="col-sm-6">
+      <br>
+      <h3 class="text-center">STAFF</h3>
+      <br>
+      <p class="text-justify">The staff are always thinking about the well being of their guests and 
+        provide all the help the guests need from travelling to understanding the culture of Rajasthan. 
+        <br>The cheifs are always preparing delicious cousine with stunning flavours and new technoloyg
+        while keeping in mind what the guests wants. The cheifs always learn and discover new cousine
+        which showcase Indian and Italian tradition to their fullest.
+      </p>
+    </div>
+  </div>
+  
+<br>
+<div class="clientsay">
+  <br><br><br>
+  <div class="container" style="background-color:transparent;border:2px solid #cb8670;">
+    <div class="row">
+      <div class="col-sm-12" style="padding:20px 100px;">
+        <p class="text-center" style="font-size:35px;font-family:'Parisienne', cursive;">What Client Say</p>
+        <br>
+        <b style="font-style:italic;" class="text-jystify">Everyone has their own way of saying their 
+        veiws but i will simply stat that my stay along with my spouse in this hotel was very memorable
+        as it was our first visit to India and especially Rajasthan. To know the culture and tradition and 
+        the guide provide by the hotel knows his stuff very well and he guided us to every places that we wanted
+        to visit. Lastly I would say that the visit to this hotel can change your vacation to a dream life of yours.
+      </b>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <p style="font-style:italic;">Michael Smith ,<span style="color:#cb8670;">Client</span></p>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+</div>
+<br><br>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h3 style="color:black;font-family:'Parisienne', cursive;">Get to know more about us</h3>
+    </div>
+  </div>
+  <form class="form-group" action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+      <input type="email" name="email" value="" class="form-control" placeholder="Email" required >
+    </div>
+    <div class="col-sm-3"></div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-5"></div>
+    <div class="col-sm-2">
+      <a href="/aboutus/"><input type="submit" name="submit" value="SUSCRIBE" class="form-control" style="background-color:#fc3c3c;color:white;"></a>
+    </div>
+    <div class="col-sm-5"></div>
+  </div>
+    </form>
+</div>
+<br><br>
+{% endblock %}
