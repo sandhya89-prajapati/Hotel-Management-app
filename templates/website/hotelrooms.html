@@ -1,3 +1,28 @@
+Shortcuts simplify My Drive … 
+In the coming weeks, items in more than one folder will be replaced by shortcuts. Access to files and folders won't change.Learn more
+hotelrooms.html
+Who has access
+
+s
+System properties
+Type
+HTML
+Size
+7 KB
+Storage used
+7 KB
+Location
+website
+Owner
+Ashish Kumar
+Modified
+Feb 23, 2020 by Ashish Kumar
+Opened
+1:41 PM by me
+Created
+Feb 23, 2020
+Add a description
+Viewers can download
 {% extends 'website/webskeleton.html' %}
 {% load static %}
 
@@ -50,6 +75,175 @@
 
 <br>
 
+<div class="container shadowform text-center">
+	<form class="form-group" action="/checkavail/" method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		<br>
+	<div class="row">
+		<div class="col-sm-3">
+			Check In
+			<input type="date" name="checkin" class="form-control" value="{{ checkin }}" required>
+		</div>
+		<div class="col-sm-3">
+			Check Out
+			<input type="date" name="checkout" class="form-control" value="{{ checkout }}" required>
+		</div>
+		<div class="col-sm-1">
+			Adult
+			<select class="form-control" name="adult" required style="margin-top:0px !important;">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+		</div>
+		<div class="col-sm-1">
+			Childern
+			<select class="form-control" name="children" required style="margin-top:0px !important;">
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+		</div>
+		<div class="col-sm-2">
+			Select Room
+			<select class="form-control" name="rtype" required style='margin-top:0px !important;'>
+				{% for i in robj %}
+					<option value="{{ i }}">{{ i }}</option>
+				{% endfor %}
+			</select>
+		</div>
+		<div class="col-sm-2">
+			<a href="#"><button type="submit" name="button" class="form-control">Check Availability</button></a>
+		</div>
+	</div>
+	</form>
+	<h5 class="text-center">{{ ack }}</h5>
+</div>
+
+{% if obj %}
+<br>
+<div class="container basic">
+	<div class="row">
+		<div class="col-md-6 col-lg-6" style="position: inherit;">
+			<img src="{{ obj.roomtype.roomimg.url }}" class="img-fluid">
+		</div>
+		<div class="col-md-6 col-lg-6 side_text" style="position: inherit;">
+			<h3 class="heading">{{ obj.roomtype.roomName }}</h3>
+      <div class="price">$<span class="number">{{ obj.roomtype.roomprice }}</span>/per night</div>
+        <ul class="specs mb-5">
+          <li><strong>Categories:</strong>{{ obj.roomtype.roomName }}</li>
+          <li><strong>Facilities:</strong>{{ obj.roomtype.roomdesc }}</li>
+          <li><strong>Size:</strong> {{ obj.roomtype.roomsize }} sq. meter </li>
+          <li><strong>Occupancy:</strong> {{ obj.roomtype.roomoccupancy }}</li>
+					<li><strong>View:</strong> {{ obj.roomtype.roomview }}</li>
+        </ul>
+				<a href="/roombooking/{{ obj.hotelRoomid }}/"><button type="button" name="button" class="form-control">Book</button></a>
+			</div>
+		</div>
+	</div>
+{% endif %}
+
+<br><br>
+<div class="container basic">
+	<div class="row">
+		<div class="col-md-6 col-lg-6" style="position: inherit;">
+			<img src="{% static 'img/basic1.jpg' %}" class="img-fluid">
+		</div>
+		<div class="col-md-6 col-lg-6 side_text" style="position: inherit;">
+			<h3 class="heading">BASIC</h3>
+      <div class="price">$<span class="number">150</span>/per night</div>
+        <ul class="specs mb-5">
+			<li><strong>Categories:</strong> Basic</li>
+			<li><strong>Adult : </strong>Max 2</li>
+			<li><strong>Size : </strong>50 sq m</li>
+			<li><strong>Amenities : </strong>
+				<ul>
+					<li>Free Wi-Fi</li>
+					<li>Flatscreen TV w/ Cable</li>
+					<li>Air Conditioning</li>
+					<li>Queen Bed</li>
+					<li>Private Bathroom w/ Shower</li>
+					<li>Room Service</li>
+				</ul>
+			</li>
+        </ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container basic">
+		<div class="row">
+			<div class="col-md-6 col-lg-6 side_text" style="position: inherit;">
+				<h3 class="heading">STANDARD</h3>
+                <div class="price">$<span class="number">200</span>/per night</div>
+                <ul class="specs mb-5">
+					<li><strong>Categories:</strong> Standard</li>
+					<li><strong>Adult : </strong>Max 2</li>
+					<li><strong>Size : </strong>80 sq m</li>
+					<li><strong>Amenities : </strong>
+						<ul>
+							<li>Free Wi-Fi</li>
+							<li>Flatscreen TV w/ Cable</li>
+							<li>Queen Bed</li>
+							<li>Private Bathroom w/ Shower</li>
+							<li>Room Service</li>
+							<div id="learn1">
+								<li>Room Safe</li>
+								<li>Mini Fridge</li>
+								<li>Hair Dryer</li>
+								<li>Central A/C</li>
+							</div>
+						</ul>
+					</li>
+					<p id="button1">Learn More >></p>
+				</ul>					
+			</div>
+			<div class="col-md-6 col-lg-6" style="position: inherit;">
+				<img src="{% static 'img/standard1.jpg' %}" class="img-fluid">
+			</div>
+		</div>
+	</div>
+
+	<div class="container basic">
+		<div class="row">
+			<div class="col-md-6 col-lg-6" style="position: inherit;">
+				<img src="{% static 'img/exclusive1.jpg' %}" class="img-fluid">
+			</div>
+			<div class="col-md-6 col-lg-6 side_text" style="position: inherit;">
+				<h3 class="heading">EXCLUSIVE</h3>
+                <div class="price">$<span class="number">350</span>/per night</div>
+                <ul class="specs mb-5">
+					<li><strong>Categories:</strong> Standard</li>
+					<li><strong>Adult : </strong>Max 4</li>
+					<li><strong>Size : </strong>120 sq m</li>
+					<li><strong>Amenities : </strong>
+						<ul>
+							<li>Free Wi-Fi</li>
+							<li>Flatscreen TV w/ Cable</li>
+							<li>King Bed or 2 Queen Bed</li>
+							<li>Private Bathroom w/ Shower</li>
+							<li>Room Service</li>
+							<div id="learn2">
+								<li>Room Safe</li>
+								<li>Mini Fridge</li>
+								<li>Hair Dryer</li>
+								<li>Central A/C</li>
+								<li>Living Area</li>
+								<li>Spa</li>
+								<li>Massage</li>
+							</div>
+						</ul>
+					</li>
+					<p id="button2">Learn More >></p>
+				</ul>
+			</div>
+		</div>
+	</div>
 
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" ></script>

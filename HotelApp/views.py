@@ -47,7 +47,7 @@ def fitness(request):
         fobj = BuyFitnessPack(email=email,name=name,packtype=fitobj,expdate=newdate.strftime('%Y-%m-%d'),status='Paid')
         fobj.save()
         mailMessage = ' Name :'+str(name)+', Email :'+str(email)+', Pack :'+str(fitobj)+', Buy Date :'+str(cdate)+', Pack Expiry Date :'+str(newdate.strftime('%Y-%m-%d'))+', Pack Price :'+str(fitobj.price)+', Status : Paid'
-        send_mail('Royal Hotel Fitness Pack :','Pack Deatils :- {}'.format(mailMessage),'ak1031997@gmail.com',[email])
+        send_mail('Royal Hotel Fitness Pack :','Pack Deatils :- {}'.format(mailMessage),'sandhya1989000@gmail.com',[email])
         return redirect('/fitness/')
     return render(request,'website/fitness.html',{'obj':obj,'date':curren})
 
@@ -151,7 +151,7 @@ def roombooking(request,id):
         obj=RoomBooking(bookie=bookie,aadhar=aadhar,email=email,mob=mob,bookingdate=bookingdate,roomid=roomid,checkin=checkin,checkout=checkout,adults=adults,children=children,roomtype=roomtype,bookingmode=bookingmode,bookingamount=bookingamount,remainigamount=remainigamount,status=status)
         obj.save()
         mailMessage = 'Bookie :'+str(bookie)+', Aadhar :'+str(aadhar)+', Email :'+str(email)+', Mobile :'+str(mob)+', Room id :'+str(roomid)+', Booking Date :'+str(bookingdate)+', Check In :'+str(checkin)+', Check Out :'+str(checkout)+', Adults :'+str(adults)+', Children :'+str(children)+', Room Type :'+str(roomtype)+', Booking Mode :'+str(bookingmode)+', Booking Amount :'+str(bookingamount)+', Balance :'+str(remainigamount)+', Status :'+str(status)
-        send_mail('Royal Hotel - Room Booking Service :-',' Booking :- {}'.format(mailMessage),'sandhya89.prajapati@gmail.com',[email])
+        send_mail('Royal Hotel - Room Booking Service :-',' Booking :- {}'.format(mailMessage),'sandhya1989000@gmail.com',[email])
         return redirect('/checkavail/')
     return render(request,'website/roombooking.html',{'adu':adult,'chil':children,'date':current,'datein':din,'dateout':dout,'roomobj':roomob,'id':id})
 
@@ -169,7 +169,7 @@ def orderfood(request):
         obj = OrderFood(name=name,mob=mob,email=email,foodtype=foodtype,qty=qty,desc=desc,status=status)
         obj.save()
         mailMessage = "Name :{} , Mobile :{} , Email :{} ,Food :{} , Quantity :{} , Status :{} , Price :{} ".format(name,mob,email,foodtype,qty,'Paid',int(foodtype.price)*int(qty))
-        send_mail('Royal Hotel - Food Service','Invoice :- {}'.format(mailMessage),'sandhya89.prajapati@gmail.com',[email])
+        send_mail('Royal Hotel - Food Service','Invoice :- {}'.format(mailMessage),'sandhya1989000@gmail.com',[email])
         return redirect('/restroBar/')
     return render(request,'website/restroBar.html')
 
@@ -186,7 +186,7 @@ def orderdrink(request):
         obj = OrderDrink(name=name,mob=mob,email=email,drinktype=drinktype,qty=qty,desc=desc,status=status)
         obj.save()
         mailMessage = "Name :{} , Mobile :{} , Email :{} ,Drink :{} , Quantity :{} , Status :{} , Price :{} ".format(name,mob,email,drinktype,qty,'Paid',int(drinktype.price)*int(qty))
-        send_mail('Royal Hotel - Food Service','Invoice :- {}'.format(mailMessage),'sandhya89.prajapati@gmail.com',[email])
+        send_mail('Royal Hotel - Food Service','Invoice :- {}'.format(mailMessage),'sandhya1989000@gmail.com',[email])
         return redirect('/restroBar/')
     return render(request,'website/restroBar.html')
 
